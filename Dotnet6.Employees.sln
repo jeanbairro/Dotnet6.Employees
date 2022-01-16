@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{9731E24A-0A29-46D1-95C6-5FBE533F3CA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet6.Employees.Domain", "src\3 - Domain\ClassLibrary1\Dotnet6.Employees.Domain.csproj", "{7E35534D-8A1E-4BA4-BC36-24284829B66F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet6.Employees.Domain", "src\3 - Domain\Dotnet6.Employees.Domain\Dotnet6.Employees.Domain.csproj", "{7E35534D-8A1E-4BA4-BC36-24284829B66F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet6.Extensions", "src\4 - Infrastructure\Dotnet6.Extensions\Dotnet6.Extensions.csproj", "{E3BE6D3F-00AC-48C9-A39B-4C39307DC994}"
 EndProject
