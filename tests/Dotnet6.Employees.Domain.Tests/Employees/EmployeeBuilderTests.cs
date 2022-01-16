@@ -12,7 +12,7 @@ namespace Dotnet6.Employees.Domain.Tests.Employees
             Fixture = fixture;
         }
 
-        public EmployeeBuilderTestsFixture Fixture { get; set; }
+        private EmployeeBuilderTestsFixture Fixture { get; set; }
 
         [Fact(DisplayName = "Deve criar um funcionário inválido")]
         public void ShouldBuildAnInvalidEmployee()
