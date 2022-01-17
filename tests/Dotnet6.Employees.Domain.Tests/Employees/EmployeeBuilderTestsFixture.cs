@@ -1,6 +1,5 @@
 ﻿using Bogus;
 using Dotnet6.Employees.Domain.AggregatesModel.Employees;
-using Dotnet6.Employees.Domain.Entities.AggregatesModel;
 using Xunit;
 
 namespace Dotnet6.Employees.Domain.Tests.Employees

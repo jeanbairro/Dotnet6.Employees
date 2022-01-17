@@ -1,5 +1,4 @@
-﻿using Dotnet6.Employees.Domain.Entities.AggregatesModel;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
 {

@@ -1,9 +1,9 @@
-﻿using Dotnet6.Employees.Domain.Abstractions;
-using Dotnet6.Extensions.Strings;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Dotnet6.Employees.Domain.Abstractions;
+using Dotnet6.Employees.Extensions.Strings;
 
-namespace Dotnet6.Employees.Domain.Entities.AggregatesModel
+namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
 {
     public class Employee : ValidableEntity
     {
@@ -16,7 +16,7 @@ namespace Dotnet6.Employees.Domain.Entities.AggregatesModel
 
         public Employee(string email, string fullName, string password, ICollection<string> phoneNumbers, string plateNumber)
         {
-            _phoneNumbers ??= new List<string>();
+            _phoneNumbers = new List<string>();
             AddPhoneNumbers(phoneNumbers);
             SetEmail(email);
             SetFullName(fullName);

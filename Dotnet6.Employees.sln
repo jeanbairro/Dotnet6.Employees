@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet6.Employees.Domain", "src\3 - Domain\Dotnet6.Employees.Domain\Dotnet6.Employees.Domain.csproj", "{7E35534D-8A1E-4BA4-BC36-24284829B66F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet6.Extensions", "src\4 - Infrastructure\Dotnet6.Extensions\Dotnet6.Extensions.csproj", "{E3BE6D3F-00AC-48C9-A39B-4C39307DC994}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet6.Employees.Extensions", "src\4 - Infrastructure\Dotnet6.Employees.Extensions\Dotnet6.Employees.Extensions.csproj", "{E3BE6D3F-00AC-48C9-A39B-4C39307DC994}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet6.Employees.Domain.Tests", "tests\Dotnet6.Employees.Domain.Tests\Dotnet6.Employees.Domain.Tests.csproj", "{F21F618E-B47B-495C-8E1F-0429894E6228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet6.Employees.Domain.Tests", "tests\Dotnet6.Employees.Domain.Tests\Dotnet6.Employees.Domain.Tests.csproj", "{F21F618E-B47B-495C-8E1F-0429894E6228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
