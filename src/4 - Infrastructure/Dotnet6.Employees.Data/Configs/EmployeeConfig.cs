@@ -8,6 +8,7 @@ public class EmployeeConfig : IEntityTypeConfiguration<Employee>
 {
     public void Configure(EntityTypeBuilder<Employee> builder)
     {
+        builder.ToTable(nameof(Employee));
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Email).HasMaxLength(Employee.EmailMaxLength).IsRequired();
         builder.Property(x => x.FullName).HasMaxLength(Employee.FullNameMaxLength).IsRequired();
