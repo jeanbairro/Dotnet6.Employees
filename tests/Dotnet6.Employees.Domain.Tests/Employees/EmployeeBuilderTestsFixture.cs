@@ -25,7 +25,7 @@ namespace Dotnet6.Employees.Domain.Tests.Employees
                     .WithPassword(f.Random.AlphaNumeric(Employee.PasswordMaxLength + 1).OrNull(f, NullWeight).OrDefault(f, EmptyWeight))
                     .WithPhoneNumbers(f
                         .Make(PhoneNumbersCount, () => f.Phone.PhoneNumber("(###)###-###").OrNull(f, NullWeight).OrDefault(f, EmptyWeight)))
-                    .WithPlateNumber(f.Random.Number(0, 9999999).ToString().OrNull(f, NullWeight).OrDefault(f, EmptyWeight)));
+                    .WithPlateNumber(f.Random.Number(Employee.PlateNumberMaxSize + 1, int.MaxValue).OrDefault(f, EmptyWeight)));
 
             return employeeBuilder.Generate().Build();
         }
@@ -39,7 +39,7 @@ namespace Dotnet6.Employees.Domain.Tests.Employees
                     .WithFullName(f.Name.FullName())
                     .WithPassword(f.Internet.Password(Employee.PasswordMaxLength))
                     .WithPhoneNumbers(f.Make(PhoneNumbersCount, () => f.Phone.PhoneNumber("(##)#####-####")))
-                    .WithPlateNumber(f.Random.Number(10000000, 99999999).ToString()));
+                    .WithPlateNumber(f.Random.Number(1, Employee.PlateNumberMaxSize)));
 
             return employeeBuilder.Generate().Build();
         }

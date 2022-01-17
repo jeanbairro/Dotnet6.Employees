@@ -8,7 +8,7 @@ namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
         private string fullName;
         private string password;
         private ICollection<string> phoneNumbers;
-        private string plateNumber;
+        private int plateNumber;
         
         public Employee Build()
             => new(email, fullName, password, phoneNumbers, plateNumber);
@@ -36,7 +36,7 @@ namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
             return this;
         }
 
-        public EmployeeBuilder WithPlateNumber(string plateNumber)
+        public EmployeeBuilder WithPlateNumber(int plateNumber)
         {
             this.plateNumber = plateNumber;
             return this;

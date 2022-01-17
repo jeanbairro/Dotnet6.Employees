@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet6.Employees.Extension
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet6.Employees.Domain.Tests", "tests\Dotnet6.Employees.Domain.Tests\Dotnet6.Employees.Domain.Tests.csproj", "{F21F618E-B47B-495C-8E1F-0429894E6228}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet6.Employees.Data", "src\4 - Infrastructure\Dotnet6.Employees.Data\Dotnet6.Employees.Data.csproj", "{F9B21CA4-718C-44CB-BE80-491C10A43B9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F21F618E-B47B-495C-8E1F-0429894E6228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F21F618E-B47B-495C-8E1F-0429894E6228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F21F618E-B47B-495C-8E1F-0429894E6228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B21CA4-718C-44CB-BE80-491C10A43B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B21CA4-718C-44CB-BE80-491C10A43B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B21CA4-718C-44CB-BE80-491C10A43B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B21CA4-718C-44CB-BE80-491C10A43B9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{7E35534D-8A1E-4BA4-BC36-24284829B66F} = {E670EA9E-3A69-42FC-BFC0-7DC5CDC61136}
 		{E3BE6D3F-00AC-48C9-A39B-4C39307DC994} = {9731E24A-0A29-46D1-95C6-5FBE533F3CA6}
 		{F21F618E-B47B-495C-8E1F-0429894E6228} = {63736A59-7910-4CF9-BF17-0D4FEA7BD804}
+		{F9B21CA4-718C-44CB-BE80-491C10A43B9E} = {9731E24A-0A29-46D1-95C6-5FBE533F3CA6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34361197-D371-4A93-877C-313F049AFF63}

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Dotnet6.Employees.Domain.Abstractions;
 using Dotnet6.Employees.Extensions.Strings;
@@ -11,10 +13,10 @@ namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
         public const int FullNameMaxLength = 100;
         public const int PasswordMaxLength = 20;
         public const int PasswordMinLength = 8;
-        public const int PlateNumberLength = 8;
+        public const int PlateNumberMaxSize = 99999999;
         private readonly List<string> _phoneNumbers;
 
-        public Employee(string email, string fullName, string password, ICollection<string> phoneNumbers, string plateNumber)
+        public Employee(string email, string fullName, string password, ICollection<string> phoneNumbers, int plateNumber)
         {
             _phoneNumbers = new List<string>();
             AddPhoneNumbers(phoneNumbers);
@@ -26,16 +28,18 @@ namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
 
         public string Email { get; private set; }
         public string FullName { get; private set; }
-        public long Id { get; set; }
-        public string Password { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; }
+        public string Password { get; private set; }
         public IReadOnlyCollection<string> PhoneNumbers => _phoneNumbers;
-        public string PlateNumber { get; private set; }
+        public int PlateNumber { get; private set; }
 
         public void AddPhoneNumbers(ICollection<string> phoneNumbers)
         {
             phoneNumbers?
                 .ToList()
-                .ForEach(p => AddPhoneNumber(p));
+                .ForEach(AddPhoneNumber);
         }
 
         public void SetEmail(string email)
@@ -89,17 +93,17 @@ namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
             Password = password;
         }
 
-        public void SetPlateNumber(string plateNumber)
+        public void SetPlateNumber(int plateNumber)
         {
-            if (string.IsNullOrWhiteSpace(plateNumber))
+            if (plateNumber == default)
             {
                 AddError($"O número de chapa é obrigatório.");
                 return;
             }
 
-            if (plateNumber.Length != PlateNumberLength)
+            if (plateNumber > PlateNumberMaxSize)
             {
-                AddError($"Informe o número de chapa com {PlateNumberLength} caracteres.");
+                AddError($"O número de chapa deve ser menor que {PlateNumberMaxSize}.");
                 return;
             }
 
