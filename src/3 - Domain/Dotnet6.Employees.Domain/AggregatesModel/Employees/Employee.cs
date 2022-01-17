@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Dotnet6.Employees.Domain.Abstractions;
 using Dotnet6.Employees.Extensions.Strings;
 
 namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
 {
-    public class Employee : ValidableEntity
+    public class Employee : Entity
     {
         public const int EmailMaxLength = 256;
         public const int FullNameMaxLength = 100;
@@ -28,9 +26,6 @@ namespace Dotnet6.Employees.Domain.AggregatesModel.Employees
 
         public string Email { get; private set; }
         public string FullName { get; private set; }
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long Id { get; }
         public string Password { get; private set; }
         public IReadOnlyCollection<string> PhoneNumbers => _phoneNumbers;
         public int PlateNumber { get; private set; }
